@@ -2,6 +2,10 @@
 
 Version **0.1.0** — an independent NTech Tools utility.
 
+## Branch purpose
+
+`ps3-legacy-browser-bridge-v0.1.0` is the stable, versioned PS3 Legacy Browser Bridge **0.1.0** release branch. Use it to download and run this fixed release. Ongoing work belongs on `ps3-legacy-browser-bridge-dev`; this branch receives only release-specific documentation or critical corrections.
+
 PS3 Legacy Browser Bridge runs a small HTTP server on a computer connected to the same trusted local network as a PlayStation 3. The PS3 connects to the computer over plain local HTTP, while the computer forwards requests to `https://ps3tool.com` using modern TLS.
 
 This helps when the legacy PS3 browser cannot negotiate the upstream site's HTTPS connection. It is a compatibility bridge, **not an offline flasher and not a copy of PS3Tool**.
