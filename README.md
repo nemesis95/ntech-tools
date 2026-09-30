@@ -2,6 +2,10 @@
 
 Version **0.0.1** — an NTech Tools utility.
 
+## Branch purpose
+
+`lan-file-transfer-v0.0.1` is the stable, versioned LAN File Transfer **0.0.1** release branch. Use it to download and run this fixed release. Ongoing work belongs on `lan-file-transfer-dev`; this branch receives only release-specific documentation or critical corrections.
+
 LAN File Transfer sends files and complete folder trees directly between computers on the same trusted local network. The receiving computer runs the server; every sending device uses an ordinary web browser.
 
 ## Highlights
