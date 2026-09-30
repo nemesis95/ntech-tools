@@ -2,21 +2,24 @@
 
 NTech Tools is a public repository for small, practical utilities that solve everyday technical problems.
 
-Each stable tool is developed on its own versioned branch so that it can be downloaded, tested, and maintained independently.
+Each stable tool is developed on its own branch so that it can be downloaded, tested, and maintained independently.
 
 ## Available tools
 
-| Tool | Version | Branch | Description |
-| --- | --- | --- | --- |
-| LAN File Transfer | 0.0.1 | `lan-file-transfer-v0.0.1` | Transfer files and complete folders between Windows, macOS, and Linux computers over a trusted local network. |
+| Tool | Version | Stable branch | Development branch | Description |
+| --- | --- | --- | --- | --- |
+| LAN File Transfer | 0.0.1 | `lan-file-transfer-v0.0.1` | `lan-file-transfer-dev` | Transfer files and complete folders between Windows, macOS, and Linux computers over a trusted local network. |
 
 ## Repository structure
 
-- `main` — project catalog, repository information, and links to individual tools.
-- Versioned tool branches — complete source code and documentation for a specific tool release.
+- `main` — public catalog, repository information, and links to individual tools. Tool source code is not merged into this branch.
+- `*-dev` branches — active development and documentation work for a tool.
+- Versioned tool branches — stable source code and documentation for a specific tool release.
 - Git tags — immutable release markers, such as `v0.0.1`.
 
-See [Branch Guide](docs/BRANCHES.md) for instructions on opening and downloading a tool branch.
+All tool branches share repository history with `main`. Development happens on the tool's development branch and stable releases are published to a versioned branch without merging the complete tool into the catalog branch.
+
+See [Branch Guide](docs/BRANCHES.md) for the complete workflow.
 
 ## Status
 
