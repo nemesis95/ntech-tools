@@ -9,6 +9,7 @@ Each stable tool is developed on its own branch so that it can be downloaded, te
 | Tool | Version | Stable branch | Development branch | Description |
 | --- | --- | --- | --- | --- |
 | LAN File Transfer | 0.0.1 | `lan-file-transfer-v0.0.1` | `lan-file-transfer-dev` | Transfer files and complete folders between Windows, macOS, and Linux computers over a trusted local network. |
+| PS3 Legacy Browser Bridge | 0.1.0 | `ps3-legacy-browser-bridge-v0.1.0` | `ps3-legacy-browser-bridge-dev` | Forward legacy PS3 browser requests through a computer that handles modern HTTPS. |
 
 ## Repository structure
 
@@ -23,4 +24,4 @@ See [Branch Guide](docs/BRANCHES.md) for the complete workflow.
 
 ## Status
 
-This repository is in early development. The first published utility is LAN File Transfer `0.0.1`.
+This repository is in early development. Published utilities include LAN File Transfer `0.0.1` and PS3 Legacy Browser Bridge `0.1.0`.
