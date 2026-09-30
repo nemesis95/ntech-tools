@@ -25,6 +25,12 @@ Every tool branch is created from repository history connected to `main`. Branch
 
 The development branch is separate from `main`, but it remains publicly visible because this is a public repository. GitHub does not support private individual branches inside a public repository.
 
+## PS3 Legacy Browser Bridge branches
+
+- `ps3-legacy-browser-bridge-dev` — active development for future releases.
+- `ps3-legacy-browser-bridge-v0.1.0` — stable PS3 Legacy Browser Bridge 0.1.0 release branch.
+- `v0.1.0` — immutable release tag.
+
 ## Recommended workflow
 
 Start new work from the development branch:
@@ -66,6 +72,8 @@ Do not merge the complete tool branch into `main`. Update only the catalog entry
 ```bash
 git clone --branch lan-file-transfer-v0.0.1 --single-branch https://github.com/nemesis95/ntech-tools.git
 ```
+
+Replace the branch name with `ps2-bin-to-iso-v0.0.1` or `ps3-legacy-browser-bridge-v0.1.0` to download another stable tool.
 
 ## Switch an existing clone
 
