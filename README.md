@@ -9,6 +9,7 @@ Each stable tool is developed on its own branch so that it can be downloaded, te
 | Tool | Version | Stable branch | Development branch | Description |
 | --- | --- | --- | --- | --- |
 | LAN File Transfer | 0.0.1 | `lan-file-transfer-v0.0.1` | `lan-file-transfer-dev` | Transfer files and complete folders between Windows, macOS, and Linux computers over a trusted local network. |
+| PS2 BIN to ISO | 0.0.1 | `ps2-bin-to-iso-v0.0.1` | `ps2-bin-to-iso-dev` | Convert compatible BIN/CUE disc images to ISO locally through a drag-and-drop interface on Windows, macOS, and Linux. |
 
 ## Repository structure
 
@@ -23,4 +24,4 @@ See [Branch Guide](docs/BRANCHES.md) for the complete workflow.
 
 ## Status
 
-This repository is in early development. The first published utility is LAN File Transfer `0.0.1`.
+This repository is in early development. Published utilities currently include LAN File Transfer `0.0.1` and PS2 BIN to ISO `0.0.1`.

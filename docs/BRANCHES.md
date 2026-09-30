@@ -18,6 +18,13 @@ Every tool branch is created from repository history connected to `main`. Branch
 - `lan-file-transfer-v0.0.1` — stable LAN File Transfer 0.0.1 release branch.
 - `v0.0.1` — immutable release tag.
 
+## PS2 BIN to ISO branches
+
+- `ps2-bin-to-iso-dev` — active development for future releases.
+- `ps2-bin-to-iso-v0.0.1` — stable PS2 BIN to ISO 0.0.1 release branch.
+
+The development branch is separate from `main`, but it remains publicly visible because this is a public repository. GitHub does not support private individual branches inside a public repository.
+
 ## Recommended workflow
 
 Start new work from the development branch:
