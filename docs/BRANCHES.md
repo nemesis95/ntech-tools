@@ -18,6 +18,12 @@ Every tool branch is created from repository history connected to `main`. Branch
 - `lan-file-transfer-v0.0.1` — stable LAN File Transfer 0.0.1 release branch.
 - `v0.0.1` — immutable release tag.
 
+## PS3 Legacy Browser Bridge branches
+
+- `ps3-legacy-browser-bridge-dev` — current working branch for future changes.
+- `ps3-legacy-browser-bridge-v0.1.0` — stable PS3 Legacy Browser Bridge 0.1.0 release branch.
+- `v0.1.0` — immutable release tag.
+
 ## Recommended workflow
 
 Start new work from the development branch:
@@ -58,6 +64,12 @@ Do not merge the complete tool branch into `main`. Update only the catalog entry
 
 ```bash
 git clone --branch lan-file-transfer-v0.0.1 --single-branch https://github.com/nemesis95/ntech-tools.git
+```
+
+For PS3 Legacy Browser Bridge:
+
+```bash
+git clone --branch ps3-legacy-browser-bridge-v0.1.0 --single-branch https://github.com/nemesis95/ntech-tools.git
 ```
 
 ## Switch an existing clone
