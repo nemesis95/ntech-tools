@@ -1,6 +1,8 @@
+__pycache__/
+*.py[cod]
+*.checklog.txt
+dump.hex
+dump.bin
 .DS_Store
 Thumbs.db
 desktop.ini
-*.log
-*.pid
-*.part

@@ -1,0 +1,3 @@
+# Preserve the upstream GPL text and PyPS3checker snapshot verbatim.
+LICENSE -whitespace
+PyPS3checker/** -whitespace
