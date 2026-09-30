@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <title>PS2 BIN → ISO</title>
+    <link rel="icon" type="image/png" href="/static/ntech-symbol.png" />
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <a class="brand" href="https://ntech.rs" target="_blank" rel="noreferrer">
+          <img src="/static/ntech-symbol.png" alt="" />
+          <strong>nTech <span>tools</span></strong>
+        </a>
+        <a class="site-link" href="https://ntech.rs" target="_blank" rel="noreferrer">ntech.rs <span>↗</span></a>
+      </header>
+
+      <div class="studio-status">
+        <span><i></i> Local utility / online</span>
+        <span>BIN/CUE sector converter</span>
+        <span>Windows / Linux / macOS</span>
+      </div>
+
+      <section class="hero">
+        <div>
+          <p class="eyebrow">NTECH TOOLS · UTILITY 01</p>
+          <h1>Convert disc images.<br /><em>Locally.</em></h1>
+        </div>
+        <div class="hero-copy">
+          <p>Turn compatible BIN/CUE disc images into clean ISO files without uploading anything. Your files stay on this computer.</p>
+          <div class="hero-meta">
+            <span>01 / SELECT</span>
+            <span>02 / CONVERT</span>
+            <span>03 / DOWNLOAD</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="card-head">
+          <div>
+            <p class="eyebrow">PS2 DISC IMAGE CONVERTER</p>
+            <h2>BIN/CUE <span>→</span> ISO</h2>
+          </div>
+          <div class="local-badge"><span></span> Processing stays local</div>
+        </div>
+
+        <div class="steps" aria-label="Steps">
+          <div class="step active"><b>1</b><span>Select</span></div>
+          <i></i>
+          <div class="step"><b>2</b><span>Convert</span></div>
+          <i></i>
+          <div class="step"><b>3</b><span>Download</span></div>
+        </div>
+
+        <button id="dropZone" class="drop-zone" type="button">
+          <span class="disc" aria-hidden="true"><i></i></span>
+          <strong>Drop BIN + CUE files or a whole folder</strong>
+          <span>or click to choose files</span>
+          <small>Add one CUE file and every BIN file referenced by it</small>
+        </button>
+        <input id="fileInput" type="file" accept=".bin,.cue,application/octet-stream" multiple hidden />
+        <input id="folderInput" type="file" webkitdirectory directory multiple hidden />
+        <button id="folderButton" class="folder-button" type="button">Choose a whole folder</button>
+
+        <div id="filePanel" class="file-panel hidden">
+          <div class="section-title">
+            <span>Selected files</span>
+            <button id="clearButton" type="button">Remove all</button>
+          </div>
+          <ul id="fileList"></ul>
+        </div>
+
+        <div id="statusPanel" class="status-panel hidden" aria-live="polite">
+          <div class="status-row">
+            <div>
+              <span id="statusLabel">Preparing…</span>
+              <strong id="statusPercent">0%</strong>
+            </div>
+            <button id="cancelButton" class="quiet-button hidden" type="button">Cancel</button>
+          </div>
+          <div class="progress"><i id="progressBar"></i></div>
+          <p id="statusDetail"></p>
+        </div>
+
+        <div id="warningPanel" class="notice warning hidden"></div>
+        <div id="errorPanel" class="notice error hidden"></div>
+        <div id="resultPanel" class="results hidden">
+          <p class="eyebrow">DONE</p>
+          <h2>Your ISO is ready</h2>
+          <div id="resultList"></div>
+          <button id="newConversionButton" class="secondary-button" type="button">New conversion</button>
+        </div>
+
+        <button id="convertButton" class="convert-button" type="button" disabled>
+          <span>Convert to ISO</span><b aria-hidden="true">→</b>
+        </button>
+      </section>
+
+      <footer class="site-footer">
+        <div class="footer-brand">
+          <img src="/static/ntech-symbol.png" alt="" />
+          <div>
+            <strong>nTech tools</strong>
+            <span>Owned and maintained by ntech.rs</span>
+          </div>
+        </div>
+        <p><b>Lawful use only.</b> Convert only files you own or are authorized to use. Do not use this tool to bypass protection measures or distribute copyrighted game images.</p>
+        <button id="shutdownButton" type="button">Stop local app</button>
+      </footer>
+      <div class="legal-line">
+        <span>© 2026 nTech / ntech.rs. All rights reserved.</span>
+        <span>PS2 is a trademark of Sony Interactive Entertainment Inc. nTech is not affiliated with or endorsed by Sony.</span>
+      </div>
+    </main>
+    <script src="/static/app.js"></script>
+  </body>
+</html>

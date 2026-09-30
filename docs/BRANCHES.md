@@ -18,6 +18,13 @@ Every tool branch is created from repository history connected to `main`. Branch
 - `lan-file-transfer-v0.0.1` — stable LAN File Transfer 0.0.1 release branch.
 - `v0.0.1` — immutable release tag.
 
+## PS2 BIN to ISO branches
+
+- `ps2-bin-to-iso-dev` — active work for future versions.
+- `ps2-bin-to-iso-v0.0.1` — stable PS2 BIN to ISO 0.0.1 release.
+
+The development branch is isolated from `main`, but it is visible on GitHub because this repository is public. GitHub branch visibility cannot be made private independently of repository visibility.
+
 ## Recommended workflow
 
 Start new work from the development branch:
@@ -46,6 +53,8 @@ git push origin v0.0.2
 ```
 
 Do not merge the complete tool branch into `main`. Update only the catalog entry on `main` when a new stable version is published.
+
+For PS2 BIN to ISO, replace the LAN File Transfer branch names in the examples with `ps2-bin-to-iso-dev` and the next versioned branch name, such as `ps2-bin-to-iso-v0.0.2`.
 
 ## View a tool on GitHub
 
