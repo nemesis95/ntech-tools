@@ -2,6 +2,10 @@
 
 Version **0.0.1** — an nTech Tools utility.
 
+## Branch purpose
+
+`ps2-bin-to-iso-v0.0.1` is the stable, versioned PS2 BIN to ISO **0.0.1** release branch. Use it to download and run this fixed release. Ongoing work belongs on `ps2-bin-to-iso-dev`; this branch receives only release-specific documentation or critical corrections.
+
 A local drag-and-drop web app by [nTech](https://ntech.rs) that performs real sector conversion of PS2 CD images from `BIN/CUE` to `ISO`. It runs on Windows, Linux, and macOS without uploading your game files to the internet.
 
 ## Quick start
