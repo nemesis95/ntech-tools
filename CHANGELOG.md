@@ -9,4 +9,4 @@
 - Added simultaneous sender support.
 - Added collision-safe file naming and path validation.
 - Added transfer event logging and interrupted-upload cleanup.
-- Added English project documentation and a Serbian/Bosnian tutorial.
+- Added complete English project documentation and tutorial.

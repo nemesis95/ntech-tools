@@ -50,7 +50,7 @@ Received content is stored in `Received Files/`. Runtime activity is recorded in
 ## Documentation
 
 - [Complete tutorial](TUTORIAL.md)
-- [Detailed feature list](MOGUCNOSTI.md)
+- [Detailed feature list](FEATURES.md)
 - [Changes in this version](CHANGELOG.md)
 
 ## Security

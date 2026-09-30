@@ -1,138 +1,138 @@
-# LAN File Transfer 0.0.1 — tutorijal
+# LAN File Transfer 0.0.1 — Tutorial
 
-Ovaj tutorijal objašnjava kako da preneseš fajlove i cijele foldere između Windows, macOS i Linux računara na istoj lokalnoj mreži.
+This tutorial explains how to transfer files and complete folders between Windows, macOS, and Linux computers on the same local network.
 
-## 1. Odaberi prijemni računar
+## 1. Choose the receiving computer
 
-Prijemni računar je uređaj na kojem pokrećeš server. Svi uspješno preneseni fajlovi biće sačuvani u njegovom folderu `Received Files`.
+The receiving computer is the device that runs the server. Every successfully transferred file is stored in its `Received Files` directory.
 
-Računar koji šalje ne mora imati instaliranu aplikaciju. Potreban mu je samo browser.
+The sending computer does not need the application installed. It only needs a modern web browser.
 
-## 2. Instaliraj Node.js
+## 2. Install Node.js
 
-Na prijemnom računaru mora biti instaliran Node.js 18 ili noviji.
+The receiving computer requires Node.js 18 or newer.
 
-Provjera verzije:
+Check the installed version:
 
 ```bash
 node --version
 ```
 
-Ako Node.js nije instaliran, preuzmi aktuelnu LTS verziju sa [nodejs.org](https://nodejs.org/).
+If Node.js is not installed, download the current LTS version from [nodejs.org](https://nodejs.org/).
 
-Windows desktop paket može sadržati `runtime/node.exe`; u tom slučaju posebna instalacija nije potrebna.
+The Windows desktop package may include `runtime/node.exe`. When that runtime is present, a separate Node.js installation is not required.
 
-## 3. Pokreni server
+## 3. Start the server
 
 ### Windows
 
-Dvaput klikni `Start on Windows.cmd`.
+Double-click `Start on Windows.cmd`.
 
-Ako Windows Firewall prikaže pitanje, dozvoli pristup samo za **Private networks**.
+If Windows Firewall prompts you, allow access for **Private networks** only.
 
 ### macOS
 
-Prvi put u Terminalu, unutar projektnog foldera, pokreni:
+The first time, open Terminal in the project directory and run:
 
 ```bash
 chmod +x "Start on macOS.command" "Stop on macOS.command"
 ```
 
-Zatim pokreni:
+Then start the server:
 
 ```bash
 ./"Start on macOS.command"
 ```
 
-Ako macOS blokira fajl, klikni ga uz `Control`, izaberi **Open** i potvrdi.
+If macOS blocks the file, Control-click it, choose **Open**, and confirm.
 
 ### Linux
 
-Prvi put pokreni:
+The first time, run:
 
 ```bash
 chmod +x start-on-linux.sh stop-on-linux.sh
 ```
 
-Zatim:
+Then start the server:
 
 ```bash
 ./start-on-linux.sh
 ```
 
-## 4. Otvori privatnu adresu
+## 4. Open the private address
 
-Serverski prozor prikazaće adresu sličnu ovoj:
+The server window displays an address similar to:
 
 ```text
 http://192.168.1.25:8765/a1b2c3d4e5f6/
 ```
 
-Na računaru ili telefonu koji šalje podatke otvori tu adresu u Safariju, Chromeu, Edgeu ili Firefoxu.
+Open the complete address on the sending computer or phone using Safari, Chrome, Edge, or Firefox.
 
-Oba uređaja moraju biti na istoj Wi-Fi ili žičnoj mreži.
+Both devices must be connected to the same Wi-Fi or wired network.
 
-## 5. Pošalji fajlove ili foldere
+## 5. Send files or folders
 
-Na web stranici možeš:
+On the transfer page, you can:
 
-- izabrati jedan ili više fajlova;
-- izabrati kompletan folder;
-- prevući fajlove ili foldere na označeno područje.
+- select one or more files;
+- select a complete folder;
+- drag files or folders onto the drop area.
 
-Kod slanja foldera server automatski pravi isti folder i podfoldere unutar `Received Files`.
+When a folder is sent, the server automatically recreates the folder and its subfolders inside `Received Files`.
 
-## 6. Provjeri rezultat
+## 6. Verify the result
 
-Za svaki fajl stranica prikazuje napredak. Uspješan prijenos završava porukom:
+The page displays progress for every file. A successful transfer ends with:
 
 ```text
 Receiver confirmed
 ```
 
-To znači da je prijemni računar potvrdio da je fajl sačuvan. Greška se prikazuje uz konkretan fajl.
+This message means that the receiving computer confirmed that the file was saved. Any failure is displayed next to the affected file.
 
-Dodatna evidencija nalazi se u `transfer.log` na prijemnom računaru.
+Additional activity is recorded in `transfer.log` on the receiving computer.
 
-## 7. Više računara
+## 7. Use multiple computers
 
-Više uređaja može istovremeno slati podatke jednom pokrenutom serveru. Svaki uređaj otvara istu privatnu adresu.
+Multiple devices can send data to one running server at the same time. Each device opens the same private address.
 
-Jedna otvorena stranica šalje na jedan prijemni računar. Verzija 0.0.1 ne šalje automatski isti fajl na više servera.
+One browser page sends to one receiving computer. Version 0.0.1 does not automatically send the same file to multiple servers.
 
-## 8. Zaustavi server
+## 8. Stop the server
 
-U serverskom terminalu pritisni `Ctrl+C` ili pokreni odgovarajuću Stop skriptu:
+Press `Ctrl+C` in the server terminal, or run the appropriate stop script:
 
 - Windows: `Stop on Windows.cmd`
 - macOS: `Stop on macOS.command`
 - Linux: `./stop-on-linux.sh`
 
-## Rješavanje problema
+## Troubleshooting
 
-### Stranica se ne otvara
+### The page does not open
 
-- Provjeri da li je serverski prozor još otvoren.
-- Provjeri da li su oba uređaja na istoj mreži.
-- Ponovo prepiši cijelu adresu, uključujući nasumični završetak.
-- Na Windowsu provjeri da je Firewall pristup dozvoljen za privatnu mrežu.
-- Isključi VPN na oba uređaja tokom lokalnog prijenosa ako razdvaja mrežni saobraćaj.
+- Confirm that the server window is still open.
+- Confirm that both devices are connected to the same network.
+- Enter the complete address again, including its random final segment.
+- On Windows, confirm that firewall access is allowed for the private network.
+- Temporarily disconnect a VPN if it isolates local network traffic.
 
-### Node.js nije pronađen
+### Node.js is not found
 
-Instaliraj Node.js 18 ili noviji, zatvori terminal i pokreni skriptu ponovo.
+Install Node.js 18 or newer, close the terminal, and run the start script again.
 
-### Fajl već postoji
+### A file already exists
 
-Server ga neće prepisati. Nova kopija dobija ime poput `fajl (1).pdf`.
+The server never overwrites it. The new copy receives a numbered name such as `file (1).pdf`.
 
-### Veza je prekinuta
+### The connection was interrupted
 
-Nepotpuni `.part` fajl se uklanja. Ponovo pošalji taj fajl kada se veza stabilizuje.
+The incomplete `.part` file is removed automatically. Send that file again after the connection becomes stable.
 
-## Sigurnosne preporuke
+## Security recommendations
 
-- Koristi aplikaciju samo na privatnoj i pouzdanoj mreži.
-- Ne prosljeđuj privatnu adresu nepoznatim osobama.
-- Zaustavi server kada završiš prijenos.
-- Verzija 0.0.1 koristi lokalni HTTP bez enkripcije i nije namijenjena javnom internetu.
+- Use the application only on a trusted private network.
+- Do not share the private address with unknown people.
+- Stop the server when the transfer is complete.
+- Version 0.0.1 uses unencrypted local HTTP and is not designed for the public internet.
